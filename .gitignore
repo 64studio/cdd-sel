@@ -1,0 +1,3 @@
+debian/*.postrm.debhelper
+debian/*.debhelper.log
+debian/debhelper.log

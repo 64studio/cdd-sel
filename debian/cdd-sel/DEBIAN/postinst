@@ -1,0 +1,27 @@
+#!/bin/sh
+set -e
+. /usr/share/debconf/confmodule
+
+# if apt returns anything but 0 then throw an error
+aptfailed() {
+    ret=$?
+    if [ "$ret" != 0 ]; then
+        exit $ret
+    fi
+}
+
+# show progress bar
+db_progress START 0 4 cdd-sel/progress/title
+
+# run apt
+db_progress INFO cdd-sel/progress/running
+db_progress STEP 1
+in-target sh -c "aptitude install --without-recommends -q -y -o Dpkg::Options::=\"--force-confdef\" -o Dpkg::Options::=\"--force-confold\" ~tcdd" || aptfailed
+
+#done!
+db_progress INFO cdd-sel/progress/done
+db_progress SET 4
+sleep 3
+
+# finish
+db_progress STOP

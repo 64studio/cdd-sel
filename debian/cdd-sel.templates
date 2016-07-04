@@ -1,0 +1,19 @@
+Template: debian-installer/cdd-sel/title
+Type: text
+Description: Install custom packages
+
+Template: finish-install/progress/cdd-sel
+Type: text
+Description: Installing custom packages
+
+Template: cdd-sel/progress/title
+Type: text
+Description: Installing custom packages
+
+Template: cdd-sel/progress/running
+Type: text
+Description: Installing packages...
+
+Template: cdd-sel/progress/done
+Type: text
+Description: All done!

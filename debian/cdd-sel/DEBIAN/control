@@ -1,0 +1,10 @@
+Package: cdd-sel
+Version: 0.1
+Architecture: all
+Installer-Menu-Item: 7000
+Maintainer: Chris Obbard <chris@64studio.com>
+Installed-Size: 9
+Depends: cdebconf-udeb, pkgsel
+Section: debian-installer
+Priority: standard
+Description: Installs custom packages

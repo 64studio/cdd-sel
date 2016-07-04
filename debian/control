@@ -1,0 +1,15 @@
+Source: cdd-sel
+Section: debian-installer
+Priority: standard
+Maintainer: Chris Obbard <chris@64studio.com>
+Uploaders: Chris Obbard <chris@64studio.com>
+Build-Depends: debhelper (>= 9), po-debconf
+Vcs-Browser: https://
+Vcs-Git: https://
+
+Package: cdd-sel
+Package-Type: udeb
+Architecture: all
+Depends: ${misc:Depends}, pkgsel
+XB-Installer-Menu-Item: 7000
+Description: Installs custom packages
